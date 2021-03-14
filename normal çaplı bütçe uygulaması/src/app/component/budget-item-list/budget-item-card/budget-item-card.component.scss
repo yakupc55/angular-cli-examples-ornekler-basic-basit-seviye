@@ -1,0 +1,99 @@
+@import '../../../../main-style.scss';
+$deleteSize : 26px;
+.root{
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    &:hover{
+        .x-icon-button{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .x-icon-button{
+        position: absolute;
+        height:$deleteSize;
+        width: $deleteSize;
+        border-radius: 50%;
+        background:$dark;
+        background-image: url('../../../../assets/delete_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -($deleteSize/2); // this has to be half of the widht
+        right: -($deleteSize/2); // this has to be half of the height
+        
+        transform: scale(0);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+        &:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+}
+
+.budget-item{
+    display: flex;
+    flex-direction: row;
+    min-width: 280px;
+    width: 100%;
+    background-color: $light-grey;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.5s ease-in-out;
+    &:hover{
+        background-color: darken($light-grey, 10%);
+    }
+
+    .description{
+        display: flex;
+        flex-grow: 1;
+        font-size: 18px;
+        margin-left: 10px;
+        align-items: center;
+    }
+
+    .amount{
+        float: right;
+        padding: 3px;
+        border-radius: 3px;
+    }
+}
+
+.expense{
+    p {
+        color: $red;
+    }
+
+    .amount
+    {
+        background-color: $light-red;
+    }
+}
+
+.expense{
+    p {
+        color: $red;
+    }
+
+    .amount
+    {
+        background-color: $light-red;
+    }
+}
+
+.income{
+    p {
+        color: $green;
+    }
+
+    .amount
+    {
+        background-color: $light-green;
+    }
+}
