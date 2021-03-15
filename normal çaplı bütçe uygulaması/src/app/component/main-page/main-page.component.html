@@ -17,4 +17,4 @@ https://www.youtube.com/watch?v=sU4z4Ti-8OQ -->
 
 <hr style="margin-top: 0">
 
-<app-budget-item-list [budgetItems]= "budgetItems"></app-budget-item-list>
+<app-budget-item-list [budgetItems]= "budgetItems" (delete)="deleteItem($event)"></app-budget-item-list>

@@ -39,6 +39,7 @@ $deleteSize : 26px;
     display: flex;
     flex-direction: row;
     min-width: 280px;
+    max-width: 350px;
     width: 100%;
     background-color: $light-grey;
     padding: 10px;
@@ -56,12 +57,18 @@ $deleteSize : 26px;
         font-size: 18px;
         margin-left: 10px;
         align-items: center;
+        max-width: 200px;
+        overflow: hidden;
+        
     }
 
     .amount{
+        text-align: right;
+        min-width: 50px;
         float: right;
         padding: 3px;
         border-radius: 3px;
+        overflow: hidden;
     }
 }
 
