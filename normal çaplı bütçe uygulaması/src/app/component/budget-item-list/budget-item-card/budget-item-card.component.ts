@@ -10,13 +10,17 @@ export class BudgetItemCardComponent implements OnInit {
 
   @Input() item: BudgetItem = new BudgetItem('',0);
   @Output() xButtonClick: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
+  @Output() cardClick:  EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onXButtonclick(){
-    console.log("card kısmı çalışıyor");
+    //console.log("card kısmı çalışıyor");
     this.xButtonClick.emit();
+  }
+  onCardClick(){
+    this.cardClick.emit();
   }
 }
